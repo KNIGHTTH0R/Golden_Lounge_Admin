@@ -28,7 +28,12 @@ class meal extends API_Controller {
 		$this->load->model('meal_model', 'meals');
 		$data = $this->meals
 		->get_all();
-		$this->response($data);
+		
+
+				$updated = $this->response($data);
+
+		// result
+		($updated) ? $this->success($this->ion_auth->messages()) : $this->error($this->ion_auth->errors());
 	}
 
 
