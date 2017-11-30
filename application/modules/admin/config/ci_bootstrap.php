@@ -74,6 +74,11 @@ $config['ci_bootstrap'] = array(
 				'User Groups'	=> 'user/group',
 			)
 		),
+		'gsa' => array(
+			'name'		=> 'GSA',
+			'url'		=> 'gsa',
+			'icon'		=> 'fa fa-users',
+		),
 		'facility' => array(
 			'name'		=> 'Facility',
 			'url'		=> 'facility',
@@ -129,6 +134,9 @@ $config['ci_bootstrap'] = array(
 		'util/backup_db'			=> array('webmaster'),
 		'util/restore_db'			=> array('webmaster'),
 		'util/remove_db'			=> array('webmaster'),
+		'facility'					=> array('webmaster', 'admin', 'manager'),
+		'gsa'						=> array('webmaster', 'admin', 'manager','awana'),
+		'user'						=> array('webmaster', 'admin', 'manager'),
 	),
 
 	// AdminLTE settings
@@ -138,6 +146,7 @@ $config['ci_bootstrap'] = array(
 			'admin'		=> 'skin-purple',
 			'manager'	=> 'skin-black',
 			'staff'		=> 'skin-blue',
+			'awana'		=> 'skin-blue',
 		)
 	),
 

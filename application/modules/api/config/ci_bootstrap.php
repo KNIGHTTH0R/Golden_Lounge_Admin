@@ -15,7 +15,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $config['ci_bootstrap'] = array(
 
 	// Site name
-	'site_name' => 'API Doc',
+	'site_name' => 'Golden Lounge',
 
 	// Default page title prefix
 	'page_title_prefix' => '',
