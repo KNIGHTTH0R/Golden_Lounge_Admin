@@ -56,6 +56,41 @@ $config = array(
 		),
 	),
 
+	// Create Facility
+	'facility/create' => array(
+		array(
+			'field'		=> 'name',
+			'label'		=> 'Facility Name',
+			'rules'		=> 'required',
+		),
+	),
+
+	'facility/editfacility' => array(
+		array(
+			'field'		=> 'name',
+			'label'		=> 'Facility Name',
+			'rules'		=> 'required',
+		),
+	),
+
+	'meal/editmeal' => array(
+		array(
+			'field'		=> 'name',
+			'label'		=> 'Meal Name',
+			'rules'		=> 'required',
+		),
+	),
+
+	'meal/create' => array(
+		array(
+			'field'		=> 'name',
+			'label'		=> 'Meal Name',
+			'rules'		=> 'required',
+		),
+	),
+
+
+
 	// Reset User Password
 	'user/reset_password' => array(
 		array(

@@ -31,7 +31,6 @@ class Facility extends API_Controller {
 		$this->response($data);
 	}
 
-
 	/**
 	 * @SWG\Get(
 	 * 	path="/facility/id/{id}",
@@ -77,7 +76,7 @@ class Facility extends API_Controller {
 	public function index_post()
 	{
 		$this->load->model('facility_model', 'facilities');
-		$data = elements(array('id', 'name', 'location', 'type'), $this->post());
+		$data = elements(array('id', 'name', 'type'), $this->post());
 
 		// proceed to update user
 		$updated = $this->facilities->insert($data);
@@ -86,6 +85,38 @@ class Facility extends API_Controller {
 		($updated) ? $this->success($this->ion_auth->messages()) : $this->error($this->ion_auth->errors());
 	}
 
+
+	/**
+	 * @SWG\Put(
+	 * 	path="/facility/update/{id}",
+	 * 	@SWG\Parameter(
+	 * 		in="path",
+	 * 		name="id",
+	 * 		required=true,
+	 * 		type="integer"
+	 * 	),
+	 * 	@SWG\Parameter(
+	 * 		in="body",
+	 * 		name="body",
+	 * 		description="User info",
+	 * 		required=true,
+	 * 		@SWG\Schema(ref="#/definitions/FacilityUpdate")
+	 * 	),
+	 * 	@SWG\Response(
+	 * 		response="200",
+	 * 		description="Successful operation"
+	 * 	)
+	 * )
+	 */
+	public function id_put($id)
+	{
+		print_r('ssdsdsds');
+
+		$this->load->model('facility_model', 'facilities');
+		$data = elements(array('id', 'name', 'type'), $this->post());
+		print_r($data);
+		$this->facilities->update($id, $data);
+	}
 
 
 }

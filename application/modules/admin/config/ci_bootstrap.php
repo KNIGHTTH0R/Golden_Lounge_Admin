@@ -60,39 +60,54 @@ $config['ci_bootstrap'] = array(
 	// Menu items
 	'menu' => array(
 		'home' => array(
-			'name'		=> 'Home',
+			'name'		=> 'Dashboard',
 			'url'		=> '',
 			'icon'		=> 'fa fa-home',
 		),
-		'user' => array(
-			'name'		=> 'Staff/Manpower',
-			'url'		=> 'user',
-			'icon'		=> 'fa fa-users',
-			'children'  => array(
-				'List'			=> 'user',
-				'Create'		=> 'user/create',
-				'User Groups'	=> 'user/group',
-			)
-		),
-		'gsa' => array(
-			'name'		=> 'GSA',
-			'url'		=> 'gsa',
-			'icon'		=> 'fa fa-users',
-		),
+
+
 		'facility' => array(
 			'name'		=> 'Facility',
 			'url'		=> 'facility',
-			'icon'		=> 'fa fa-users',
-
+			'icon'		=> 'fa fa-window-maximize',
+			'children'  => array(
+				'View all'			=> 'facility',
+				'View all'			=> 'facility/view_all2',
+				'Add new facility'		=> 'facility/create',
+				// 'List all facility type' => 'facility/facilitytype',
+			)
 		),
+
 		'meal' => array(
 			'name'		=> 'Meal',
 			'url'		=> 'util',
 			'icon'		=> 'fa fa-cutlery',
 			'children'  => array(
-				'Database Versions'		=> 'util/list_db',
+				'View All'		=> 'meal/view_all',
+				'Add Meal'		=> 'meal/create',
+				'Meal Cycle'		=> 'meal/cycle_all',
+				'Add New Cycle'		=> 'meal/add_cycle',
 			)
 		),
+		// 'gsa' => array(
+		// 	'name'		=> 'GSA',
+		// 	'url'		=> 'gsa',
+		// 	'icon'		=> 'fa fa-users',
+		// ),
+
+		// 'user' => array(
+		// 	'name'		=> 'Staff/Manpower',
+		// 	'url'		=> 'user',
+		// 	'icon'		=> 'fa fa-users',
+		// 	'children'  => array(
+		// 		'List'			=> 'user',
+		// 		'Create'		=> 'user/create',
+		// 		'User Groups'	=> 'user/group',
+		// 	)
+		// ),
+
+
+
 		'inventory' => array(
 			'name'		=> 'Inventory',
 			'url'		=> 'util',

@@ -84,6 +84,21 @@ $config['ci_bootstrap'] = array(
 			'name'		=> 'Home',
 			'url'		=> '',
 		),
+				'assdsd' => array(
+			'name'		=> 'Home',
+			'url'		=> '',
+						'children'  => array(
+				'List'			=> 'user',
+				'Create'		=> 'user/create',
+				'User Groups'	=> 'user/group',
+			)
+		),		'ss' => array(
+			'name'		=> 'Home',
+			'url'		=> '',
+		),		'sss' => array(
+			'name'		=> 'Home',
+			'url'		=> '',
+		),
 	),
 
 	// Login page

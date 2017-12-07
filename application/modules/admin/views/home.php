@@ -32,10 +32,6 @@
 
 
 <div class="row">
-		
-
-	</div>
-
 
 	<div class="col-md-6">
 		<?php echo modules::run('adminlte/widget/box_open', 'Inventory', 'primary', TRUE, 'Manage', 'facility'); ?>
@@ -46,6 +42,7 @@
 		<?php echo modules::run('adminlte/widget/box_close'); ?>
 	</div>
 
+</div>
 
 
 
@@ -53,4 +50,3 @@
 
 
 	
-</div>

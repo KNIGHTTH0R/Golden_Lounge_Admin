@@ -9,9 +9,10 @@ class Home extends Admin_Controller {
 		$this->mViewData['count'] = array(
 			'users' => $this->users->count_all(),
 		);
+		$this->mPageTitle = 'Dashboard';
+		
 		$this->render('home');
 
-		$this->mPageTitle = 'Lounge Sattlite';
 
 	}
 }

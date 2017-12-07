@@ -14,7 +14,7 @@ namespace MySwaggerDefinitions;
 /**
  * @SWG\Definition()
  */
-class FacilityItem {
+class MealItem {
 	
 	/**
 	 * @var int
@@ -23,48 +23,5 @@ class FacilityItem {
 	public $id;
 }
 
-/**
- * @SWG\Definition()
- */
-class FacilityAdd {
-	
 
-
-	/**
-	 * @var string
-	 * @SWG\Property()
-	 */
-	public $name;
-
-
-
-	/**
-	 * @var string
-	 * @SWG\Property()
-	 */
-	public $type;
-}
-
-
-/**
- * @SWG\Definition()
- */
-class FacilityUpdate {
-	
-
-
-
-	/**
-	 * @var string
-	 * @SWG\Property()
-	 */
-	public $name;
-
-
-	/**
-	 * @var string
-	 * @SWG\Property()
-	 */
-	public $type;
-}
 

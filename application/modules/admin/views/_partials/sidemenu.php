@@ -1,6 +1,6 @@
 <ul class="sidebar-menu">
 
-	<li class="header">MAIN NAVIGATION</li>
+	<!-- <li class="header">MAIN NAVIGATION</li> -->
 
 	<?php foreach ($menu as $parent => $parent_params): ?>
 
@@ -37,7 +37,7 @@
 		<?php endif; ?>
 
 	<?php endforeach; ?>
-	<?php if ( !empty($useful_links) ): ?>
+<!-- 	<?php if ( !empty($useful_links) ): ?>
 		<li class="header">USEFUL LINKS</li>
 		<?php foreach ($useful_links as $link): ?>
 			<?php if ($this->ion_auth->in_group($link['auth']) ): ?>
@@ -48,7 +48,7 @@
 			</li>
 			<?php endif; ?>
 		<?php endforeach; ?>
-	<?php endif; ?>
+	<?php endif; ?> -->
 
 
 </ul>
