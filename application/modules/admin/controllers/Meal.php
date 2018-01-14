@@ -289,7 +289,11 @@ class meal extends Admin_Controller {
 
 		$mealtype = array();
 		$mealtimeserving = array();
-		$availability = array('availabile', 'unavailable');
+		$availability = array('unavailabile', 'available');
+
+		$selected_type = array($mealdata->type-1);
+		$selected_timeserving = array($mealdata->time_serving-1);
+		$selected_availability = array($mealdata->status);
 
 		for ($x = 0; $x < count($meal_type); $x++) {
 		    array_push($mealtype,$meal_type[$x]->name);
@@ -299,7 +303,6 @@ class meal extends Admin_Controller {
 		    array_push($mealtimeserving,$meal_time_serving[$x]->name);
 		}; 
 
-		$availability = array('availabile', 'unavailable');
 
 		if ($form->validate()){
 			$meal_type_selected = (int)$this->input->post('type');
@@ -317,17 +320,20 @@ class meal extends Admin_Controller {
 			$meal_ingredient			= $this->input->post('ingredient');
 
 
-			if($meal_availability == '0'){
-				$meal_availability = 'Available';
-			}
-			else if($meal_availability == '1'){
-				$meal_availability = 'Unavailable';
-			}
+			// if($meal_availability == '0'){
+			// 	$meal_availability = 'Available';
+			// }
+			// else if($meal_availability == '1'){
+			// 	$meal_availability = 'Unavailable';
+			// }
 
 			$datatoupdate = elements(array('name', 'type','status', 'time_serving', 'ingredient'), array('name' => $meal_name, 'type' => $meal_type_selected,'status'=> $meal_availability, 'time_serving'=> $meal_ttime_serving_selected, 'ingredient'=> $meal_ingredient));
 			$this->meals->update($mealid, $datatoupdate);
 
 			$this->system_message->set_success('Updated');
+
+			header("Refresh:0");
+
 
 		}
 
@@ -343,8 +349,10 @@ class meal extends Admin_Controller {
 		$this->mViewData['mealtype'] = $mealtype;
 		$this->mViewData['mealtimeserving'] = $mealtimeserving;
 		$this->mViewData['availability'] = $availability;
+		$this->mViewData['selected_type'] = $selected_type;
+		$this->mViewData['selected_timeserving'] = $selected_timeserving;
+		$this->mViewData['selected_availability'] = $selected_availability;
 
-		
 		$this->render('meal/editmeal');
 	}
 

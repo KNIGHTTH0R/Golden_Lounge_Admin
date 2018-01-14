@@ -82,29 +82,20 @@ class staff extends Admin_Controller {
 
 		if ($form->validate())
 		{
-			$facility_type_selected = (int)$this->input->post('type');
 
-			$facility_type_selected = $facility_type_selected+1;
+			$staff_name			= $this->input->post('name');
 
-			$facility_type_selected = (string)$facility_type_selected;
+			$staff_position = $this->input->post('position');
 
-			$facility_availability = (int)$this->input->post('availability');
+			$datatoupdate = elements(array('name', 'position'), array('name' => $staff_name, 'position' => $staff_position));
 
-			$facility_name			= $this->input->post('name');
+			$updated = $this->staffs->update($staffid, $datatoupdate);
 
-			if($facility_availability == '0'){
-				$facility_availability = 'Available';
-			}
-			else if($facility_availability == '1'){
-				$facility_availability = 'Unavailable';
-			}
+			$this->system_message->set_success($updated);
 
-			print_r($facility_availability);
-			$datatoupdate = elements(array('name', 'type','status'), array('name' => $facility_name, 'type' => $facility_type_selected,'status'=> $facility_availability));
+			header("Refresh:0");
 
-			$updated = $this->facilities->update($facilityid, $datatoupdate);
 
-			$this->system_message->set_success('Updated');
 
 		}
 
@@ -112,7 +103,7 @@ class staff extends Admin_Controller {
 
 		// $type = substr(implode(', ', $this->input->post('type')), 0);
 		
-		$this->mPageTitle = 'Edit Facility';
+		$this->mPageTitle = 'Edit Staff';
 
 		$this->mViewData['form'] = $form;
 		$this->mViewData['data'] = $data;
@@ -144,17 +135,17 @@ class staff extends Admin_Controller {
 
 	}
 
-	public function deletefacility($facilityid){
+	public function deletestaff($staffid){
 
-		$this->load->model('facility_model', 'facilities');
-		$this->facilities->delete($facilityid);
-		$this->view_all2();
+		$this->load->model('staff_model', 'staffs');
+		$this->staffs->delete($staffid);
+		$this->view_all();
 
 	}
 
-	public function doneviewfacility(){
+	public function doneviewstaff(){
 
-		$this->view_all2();
+		$this->view_all();
 
 	}
 

@@ -31,12 +31,12 @@ $("#example").DataTable();
 
 function myFunction() {
     var txt;
-   var r = confirm("Press a button!");
+   var r = confirm("Do you want to delete this record");
     if (r == true) {
-        txt = "You pressed OK!";
+        txt = "Delete";
         window.location = "staff/deletestaff/"+<?php echo $staffs->id; ?>;
     } else {
-        txt = "You pressed Cancel!";
+        txt = "Cancel!";
     }
 
 }

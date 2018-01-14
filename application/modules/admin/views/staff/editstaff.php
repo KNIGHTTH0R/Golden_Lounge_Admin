@@ -12,13 +12,7 @@
 
 					<?php echo $form->bs3_text('Staff Name', 'name', $data->name); ?>
 
-						<!-- <label for="facility_types">Staff Position</label> -->
-						<!-- <div class="row"> -->
-							<!-- <div class="col-md-3"> -->
-								<!-- <?php echo $form->field_dropdown('type', $array); ?> -->
-							<!-- </div> -->
-						<!-- </div> -->
-					<?php echo $form->bs3_text('Staff Position', 'name', $data->position); ?>
+					<?php echo $form->bs3_text('Staff Position', 'position', $data->position); ?>
 
 						<br>
 
@@ -29,7 +23,7 @@
 		 						<?php echo $form->bs3_submit(); ?>
 							</div>
 							<div class="col-md-9">
-	            <td><a class='btn btn-flat btn-primary' href='facility/view_all2'>Done</a>
+	            <td><a class='btn btn-flat btn-primary' href='staff/viewstaff'>Done</a>
 								
 							</div>
 						</div>

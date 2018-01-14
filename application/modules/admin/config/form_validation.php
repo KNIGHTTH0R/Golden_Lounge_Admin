@@ -78,6 +78,20 @@ $config = array(
 		),
 	),
 
+
+	'staff/editstaff' => array(
+		array(
+			'field'		=> 'name',
+			'label'		=> 'Staff Name',
+			'rules'		=> 'required',
+		),
+		array(
+			'field'		=> 'position',
+			'label'		=> 'Staff Position',
+			'rules'		=> 'required',
+		),
+	),
+
 	'meal/editmeal' => array(
 		array(
 			'field'		=> 'name',

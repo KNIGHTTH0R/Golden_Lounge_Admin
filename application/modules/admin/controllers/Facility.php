@@ -130,7 +130,11 @@ class facility extends Admin_Controller {
 		    array_push($array,$facility_type_all[$x]->facility_type);
 		}; 
 
-		$availability = array('availabile', 'unavailable');
+		$availability = array('unavailabile', 'available');
+
+		$selected_availability = array($data->status);
+
+		$selected_type = array($data->type-1);
 
 		if ($form->validate())
 		{
@@ -144,19 +148,21 @@ class facility extends Admin_Controller {
 
 			$facility_name			= $this->input->post('name');
 
-			if($facility_availability == '0'){
-				$facility_availability = 'Available';
-			}
-			else if($facility_availability == '1'){
-				$facility_availability = 'Unavailable';
-			}
-
-			print_r($facility_availability);
+			// if($facility_availability == '0'){
+			// 	$facility_availability = 'Available';
+			// }
+			// else if($facility_availability == '1'){
+			// 	$facility_availability = 'Unavailable';
+			// }
+			// print_r($facility_availability);
 			$datatoupdate = elements(array('name', 'type','status'), array('name' => $facility_name, 'type' => $facility_type_selected,'status'=> $facility_availability));
 
 			$updated = $this->facilities->update($facilityid, $datatoupdate);
 
 			$this->system_message->set_success('Updated');
+
+			header("Refresh:0");
+
 
 		}
 
@@ -172,6 +178,8 @@ class facility extends Admin_Controller {
 		$this->mViewData['facility_type_all'] = $facility_type_all;
 		$this->mViewData['array'] = $array;
 		$this->mViewData['availability'] = $availability;
+		$this->mViewData['selected_availability'] = $selected_availability;
+		$this->mViewData['selected_type'] = $selected_type;
 
 		
 		$this->render('facility/editfacility');

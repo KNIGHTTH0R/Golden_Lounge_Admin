@@ -1,7 +1,7 @@
 <div class="row">
 
 	<div class="col-md-6">
-		<?php echo modules::run('adminlte/widget/box_open', 'Staff & Manpower', 'warning', TRUE, 'Manage', 'user'); ?>
+		<?php echo modules::run('adminlte/widget/box_open', 'Staff & Manpower', 'warning', TRUE, 'Manage', 'staff/view_all'); ?>
 		<?php echo modules::run('adminlte/widget/box_close'); ?>
 	</div>
 

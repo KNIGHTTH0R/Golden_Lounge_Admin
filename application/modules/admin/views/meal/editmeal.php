@@ -16,7 +16,7 @@
 						<label for="facility_types">Meal Type</label>
 						<div class="row">
 							<div class="col-md-3">
-								<?php echo $form->field_dropdown('type', $mealtype); ?>
+								<?php echo $form->field_dropdown('type', $mealtype, $selected_type); ?>
 							</div>
 						</div>
 						<br>
@@ -24,7 +24,7 @@
 						<label for="facility_types">Meal Time Serving</label>
 						<div class="row">
 							<div class="col-md-3">
-								<?php echo $form->field_dropdown('timeserving', $mealtimeserving); ?>
+								<?php echo $form->field_dropdown('timeserving', $mealtimeserving, $selected_timeserving); ?>
 							</div>
 						</div>
 						<br>
@@ -33,7 +33,7 @@
 
 						<div class="row">
 							<div class="col-md-3">
-								<?php echo $form->field_dropdown('availability', $availability); ?>
+								<?php echo $form->field_dropdown('availability', $availability, $selected_availability); ?>
 							</div>
 		
 
@@ -44,7 +44,7 @@
 		 						<?php echo $form->bs3_submit(); ?>
 							</div>
 							<div class="col-md-9">
-	            				<a class='btn btn-flat btn-primary' href='facility/view_all2'>Done</a>
+	            				<a class='btn btn-flat btn-primary' href='meal/view_all'>Done</a>
 							</div>
 						</div>
 					

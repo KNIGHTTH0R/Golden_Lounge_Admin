@@ -96,6 +96,7 @@ $config['ci_bootstrap'] = array(
 			'icon'		=> 'fa fa-users',
 			'children'  => array(
 				'View All'		=> 'staff/view_all',
+				'Add Staff'		=> 'staff/create',
 			)
 		),
 		// 'gsa' => array(
