@@ -12,11 +12,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * 	remember to add routes from /application/modules/api/config/rest.php like this:
  * 		$config['auth_override_class_method']['dummy']['*'] = 'none';
  */
-class Facility extends API_Controller {
+class Showerroom extends API_Controller {
 
 	/**
 	 * @SWG\Get(
-	 * 	path="/facility",
+	 * 	path="/showerroom",
 	 * 	@SWG\Response(
 	 * 		response="200",
 	 * 		description="Sample result",
@@ -25,15 +25,14 @@ class Facility extends API_Controller {
 	 * )
 	 */
 	public function index_get() {
-		$this->load->model('facility_model', 'facilities');
-		$data = $this->facilities
-		->get_all();
+		$this->load->model('showerroom_model', 'showerroom');
+		$data = $this->showerroom->get_all();
 		$this->response($data);
 	}
 
 	/**
 	 * @SWG\Get(
-	 * 	path="/facility/id/{id}",
+	 * 	path="/showerroom/id/{id}",
 	 * 	@SWG\Parameter(
 	 * 		in="path",
 	 * 		name="id",
@@ -50,22 +49,21 @@ class Facility extends API_Controller {
 	 */
 	public function id_get($id)
 	{
-		$this->load->model('facility_model', 'facilities');
-		$data = $this->facilities
-		->get($id);
+		$this->load->model('showerroom_model', 'showerroom');
+		$data = $this->showerroom->get($id);
 		$this->response($data);
 	}
 
 
 	/**
 	 * @SWG\Post(
-	 * 	path="/facility/update",
+	 * 	path="/showerroom/add",
 	 * 	@SWG\Parameter(
 	 * 		in="body",
 	 * 		name="body",
 	 * 		description="Facility Detail",
 	 * 		required=true,
-	 * 		@SWG\Schema(ref="#/definitions/FacilityAdd")
+	 * 		@SWG\Schema(ref="#/definitions/ShowerroomAdd")
 	 * 	),
 	 * 	@SWG\Response(
 	 * 		response="200",
@@ -75,11 +73,13 @@ class Facility extends API_Controller {
 	 */
 	public function index_post()
 	{
-		$this->load->model('facility_model', 'facilities');
-		$data = elements(array('name', 'type'), $this->post());
-		$updated = $this->facilities->update($this->post('id'), $data, True);
+		$this->load->model('showerroom_model', 'showerroom');
+		$data = elements(array('room_name', 'passenger_name', 'time_start', 'time_end', 'remarks'), $this->post());
+		$updated = $this->showerroom->insert($data);
 		$this->response($updated);
 	}
+
+
 
 
 

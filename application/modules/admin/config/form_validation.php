@@ -63,6 +63,11 @@ $config = array(
 			'label'		=> 'Facility Name',
 			'rules'		=> 'required',
 		),
+		array(
+			'field'		=> 'name',
+			'label'		=> 'Facility Name',
+			'rules'		=> 'required',
+		),
 	),
 
 	'facility/editfacility' => array(

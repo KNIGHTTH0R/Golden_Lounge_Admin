@@ -12,11 +12,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * 	remember to add routes from /application/modules/api/config/rest.php like this:
  * 		$config['auth_override_class_method']['dummy']['*'] = 'none';
  */
-class Facility extends API_Controller {
+class Gsa extends API_Controller {
 
 	/**
 	 * @SWG\Get(
-	 * 	path="/facility",
+	 * 	path="/gsa",
 	 * 	@SWG\Response(
 	 * 		response="200",
 	 * 		description="Sample result",
@@ -25,15 +25,14 @@ class Facility extends API_Controller {
 	 * )
 	 */
 	public function index_get() {
-		$this->load->model('facility_model', 'facilities');
-		$data = $this->facilities
-		->get_all();
+		$this->load->model('Gsa_model', 'gsa');
+		$data = $this->gsa->get_all();
 		$this->response($data);
 	}
 
 	/**
 	 * @SWG\Get(
-	 * 	path="/facility/id/{id}",
+	 * 	path="/gsa/id/{id}",
 	 * 	@SWG\Parameter(
 	 * 		in="path",
 	 * 		name="id",
@@ -50,36 +49,13 @@ class Facility extends API_Controller {
 	 */
 	public function id_get($id)
 	{
-		$this->load->model('facility_model', 'facilities');
-		$data = $this->facilities
-		->get($id);
+		$this->load->model('Gsa_model', 'gsa');
+		$data = $this->gsa->get($id);
 		$this->response($data);
 	}
 
 
-	/**
-	 * @SWG\Post(
-	 * 	path="/facility/update",
-	 * 	@SWG\Parameter(
-	 * 		in="body",
-	 * 		name="body",
-	 * 		description="Facility Detail",
-	 * 		required=true,
-	 * 		@SWG\Schema(ref="#/definitions/FacilityAdd")
-	 * 	),
-	 * 	@SWG\Response(
-	 * 		response="200",
-	 * 		description="Sample result",
-	 * 	)
-	 * )
-	 */
-	public function index_post()
-	{
-		$this->load->model('facility_model', 'facilities');
-		$data = elements(array('name', 'type'), $this->post());
-		$updated = $this->facilities->update($this->post('id'), $data, True);
-		$this->response($updated);
-	}
+
 
 
 

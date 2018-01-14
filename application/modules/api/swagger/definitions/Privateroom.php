@@ -1,3 +1,4 @@
+
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
@@ -14,7 +15,7 @@ namespace MySwaggerDefinitions;
 /**
  * @SWG\Definition()
  */
-class FacilityItem {
+class PrivateroomItem {
 	
 	/**
 	 * @var int
@@ -26,9 +27,19 @@ class FacilityItem {
 /**
  * @SWG\Definition()
  */
-class FacilityAdd {
-	
+class PrivateroomAdd {
 
+	/**
+	 * @var string
+	 * @SWG\Property()
+	 */
+	public $room_name;
+
+	/**
+	 * @var string
+	 * @SWG\Property()
+	 */
+	public $passenger_name;
 
 
 
@@ -36,42 +47,19 @@ class FacilityAdd {
 	 * @var string
 	 * @SWG\Property()
 	 */
-	public $name;
+	public $time_start;
 
 	/**
 	 * @var string
 	 * @SWG\Property()
 	 */
-	public $id;
-
-
-
-	/**
-	 * @var string
-	 * @SWG\Property()
-	 */
-	public $type;
-}
-
-
-/**
- * @SWG\Definition()
- */
-class FacilityUpdate {
-
+	public $time_end;
 
 
 	/**
 	 * @var string
 	 * @SWG\Property()
 	 */
-	public $name;
-
-
-	/**
-	 * @var string
-	 * @SWG\Property()
-	 */
-	public $type;
+	public $remarks;
 }
 

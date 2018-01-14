@@ -14,7 +14,7 @@ namespace MySwaggerDefinitions;
 /**
  * @SWG\Definition()
  */
-class FacilityItem {
+class QueueItem {
 	
 	/**
 	 * @var int
@@ -26,52 +26,38 @@ class FacilityItem {
 /**
  * @SWG\Definition()
  */
-class FacilityAdd {
+class AddQueue {
 	
 
 
 
 
-	/**
-	 * @var string
-	 * @SWG\Property()
-	 */
-	public $name;
-
-	/**
-	 * @var string
-	 * @SWG\Property()
-	 */
-	public $id;
-
 
 
 	/**
 	 * @var string
 	 * @SWG\Property()
 	 */
-	public $type;
+	public $facility_id;
+
+
+	/**
+	 * @var string
+	 * @SWG\Property()
+	 */
+	public $passenger_id;
+
+	/**
+	 * @var string
+	 * @SWG\Property()
+	 */
+	public $time_start;
+
+	/**
+	 * @var string
+	 * @SWG\Property()
+	 */
+	public $time_end;
 }
 
-
-/**
- * @SWG\Definition()
- */
-class FacilityUpdate {
-
-
-
-	/**
-	 * @var string
-	 * @SWG\Property()
-	 */
-	public $name;
-
-
-	/**
-	 * @var string
-	 * @SWG\Property()
-	 */
-	public $type;
-}
 

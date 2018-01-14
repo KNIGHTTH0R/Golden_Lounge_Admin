@@ -1,3 +1,4 @@
+
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
@@ -14,7 +15,7 @@ namespace MySwaggerDefinitions;
 /**
  * @SWG\Definition()
  */
-class FacilityItem {
+class PassengerOrderItem {
 	
 	/**
 	 * @var int
@@ -26,11 +27,7 @@ class FacilityItem {
 /**
  * @SWG\Definition()
  */
-class FacilityAdd {
-	
-
-
-
+class PassengerOrderAdd {
 
 	/**
 	 * @var string
@@ -42,7 +39,7 @@ class FacilityAdd {
 	 * @var string
 	 * @SWG\Property()
 	 */
-	public $id;
+	public $passenger_order;
 
 
 
@@ -50,28 +47,8 @@ class FacilityAdd {
 	 * @var string
 	 * @SWG\Property()
 	 */
-	public $type;
-}
+	public $time;
 
 
-/**
- * @SWG\Definition()
- */
-class FacilityUpdate {
-
-
-
-	/**
-	 * @var string
-	 * @SWG\Property()
-	 */
-	public $name;
-
-
-	/**
-	 * @var string
-	 * @SWG\Property()
-	 */
-	public $type;
 }
 

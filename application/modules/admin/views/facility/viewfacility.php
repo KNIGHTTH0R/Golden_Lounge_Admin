@@ -1,3 +1,4 @@
+<div class="row">
 <div class="col-md-6">
 <div class='box box-primary box-solid' >
 	<div class='box-header with-border'>
@@ -33,8 +34,8 @@
 
 		<div class='box-body row'>
 				<div class="row margin">
-                    <div class="col-sm-6">
-                      <img class="img-responsive" src="https://imagejournal.org/wp-content/uploads/bb-plugin/cache/23466317216_b99485ba14_o-panorama.jpg" alt="Photo">
+                    <div class="col-sm-12">
+                      <img class="img-responsive" src="https://image.ibb.co/nroRh6/rest_lounge.png" alt="Photo">
                     </div>
                 </div>
 		</div>
@@ -47,5 +48,6 @@
 
 		</div>
 
+</div>
 </div>
 </div>

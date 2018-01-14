@@ -71,7 +71,7 @@ $config['ci_bootstrap'] = array(
 			'url'		=> 'facility',
 			'icon'		=> 'fa fa-window-maximize',
 			'children'  => array(
-				'View all'			=> 'facility',
+				// 'View all'			=> 'facility',
 				'View all'			=> 'facility/view_all2',
 				'Add new facility'		=> 'facility/create',
 				// 'List all facility type' => 'facility/facilitytype',
@@ -87,6 +87,15 @@ $config['ci_bootstrap'] = array(
 				'Add Meal'		=> 'meal/create',
 				'Meal Cycle'		=> 'meal/cycle_all',
 				'Add New Cycle'		=> 'meal/add_cycle',
+			)
+		),
+
+		'staff' => array(
+			'name'		=> 'Saff',
+			'url'		=> 'staff',
+			'icon'		=> 'fa fa-users',
+			'children'  => array(
+				'View All'		=> 'staff/view_all',
 			)
 		),
 		// 'gsa' => array(
@@ -108,24 +117,24 @@ $config['ci_bootstrap'] = array(
 
 
 
-		'inventory' => array(
-			'name'		=> 'Inventory',
-			'url'		=> 'util',
-			'icon'		=> 'fa fa-stack-exchange',
-			'children'  => array(
-				'Database Versions'		=> 'util/list_db',
-			)
-		),
-		'panel' => array(
-			'name'		=> 'Admin Panel',
-			'url'		=> 'panel',
-			'icon'		=> 'fa fa-cog',
-			'children'  => array(
-				'Admin Users'			=> 'panel/admin_user',
-				'Create Admin User'		=> 'panel/admin_user_create',
-				'Admin User Groups'		=> 'panel/admin_user_group',
-			)
-		),
+		// 'inventory' => array(
+		// 	'name'		=> 'Inventory',
+		// 	'url'		=> 'util',
+		// 	'icon'		=> 'fa fa-stack-exchange',
+		// 	'children'  => array(
+		// 		'Database Versions'		=> 'util/list_db',
+		// 	)
+		// ),
+		// 'panel' => array(
+		// 	'name'		=> 'Admin Panel',
+		// 	'url'		=> 'panel',
+		// 	'icon'		=> 'fa fa-cog',
+		// 	'children'  => array(
+		// 		'Admin Users'			=> 'panel/admin_user',
+		// 		'Create Admin User'		=> 'panel/admin_user_create',
+		// 		'Admin User Groups'		=> 'panel/admin_user_group',
+		// 	)
+		// ),
 		'logout' => array(
 			'name'		=> 'Sign Out',
 			'url'		=> 'panel/logout',

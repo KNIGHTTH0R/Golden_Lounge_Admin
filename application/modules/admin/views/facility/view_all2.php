@@ -15,11 +15,11 @@
                 <td><?php echo $facilities->name; ?></td>
                 <td><?php echo $facilities->type; ?></td>
 	            <td>
-                    <?php if ( strtolower($facilities->status) == 'available' ): ?>
-                        <span style="color : green;">  <?php echo $facilities->status; ?></span>
+                    <?php if ( strtolower($facilities->status) == '1' ): ?>
+                        <span style="color : green;">  Available</span>
                     <?php endif; ?>
-                    <?php if ( strtolower($facilities->status) == 'unavailable' ): ?>
-                        <span style="color : red;">  <?php echo $facilities->status; ?></span>
+                    <?php if ( strtolower($facilities->status) == '0' ): ?>
+                        <span style="color : red;">  Unavailable</span>
                     <?php endif; ?>
 
                 </td>
