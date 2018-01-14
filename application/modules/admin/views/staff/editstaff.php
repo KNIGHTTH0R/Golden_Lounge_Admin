@@ -23,7 +23,7 @@
 		 						<?php echo $form->bs3_submit(); ?>
 							</div>
 							<div class="col-md-9">
-	            <td><a class='btn btn-flat btn-primary' href='staff/viewstaff'>Done</a>
+	            <td><a class='btn btn-flat btn-primary' href='staff/view_all'>Done</a>
 								
 							</div>
 						</div>

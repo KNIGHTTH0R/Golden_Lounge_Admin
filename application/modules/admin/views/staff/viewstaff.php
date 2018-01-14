@@ -34,7 +34,7 @@
 
 		<div class='box-footer'>
 			<a class='btn btn-flat btn-primary' href='staff/editstaff/<?php echo $staff->id; ?>'>Edit</a>
-			<a class='btn btn-flat btn-primary' href='staff/view_all/<?php echo $staff->id; ?>'>Done</a>
+			<a class='btn btn-flat btn-primary' href='staff/view_all'>Done</a>
 
 	
 
